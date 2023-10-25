@@ -2,15 +2,15 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Another Page</title>
+    <title>Video Display</title>
 </head>
 <body>
-    <h1>This is Another Page</h1>
-    <p>Welcome to the another page of your Flask application.</p>
+    <h1>Displaying Video</h1>
+    <p>Here's the video you requested:</p>
+    <img src="{{url_for('video_feed')}}" width="100%"> 
+    <a class="btn btn-success" href="{{url_for('download_video')}}">Download</a>
+  
+   
 
-    <video width="640" height="480" controls>
-        <source src="output_video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
 </body>
 </html>

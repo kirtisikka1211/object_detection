@@ -2,13 +2,52 @@
 <html>
 <head>
     <title>Object Detection Upload</title>
+    <style>
+        #loading-screen {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.7);
+            z-index: 9999;
+            text-align: center;
+        }
+
+        #loading-spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
 </head>
 <body>
     <h1>Upload a Video for Object Detection</h1>
-    <form method="POST" enctype="multipart/form-data">
+    <form method="POST" enctype="multipart/form-data" id="upload-form">
         <input type="file" name="video" accept=".mp4">
         <br><br>
-        <input type="submit" value="Upload">
+        <input type="submit" value="Upload" id="upload-button">
     </form>
+
+    <a href="{{ url_for('another_page') }}">Display Video</a>
+
+    <div id="loading-screen">
+        <div id="loading-spinner">Loading...</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#upload-form").submit(function(event) {
+                // Show the loading screen
+                $("#loading-screen").show();
+
+                // Disable the upload button to prevent multiple submissions
+                $("#upload-button").prop('disabled', true);
+            });
+        });
+    </script>
 </body>
 </html>
