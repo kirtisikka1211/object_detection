@@ -25,7 +25,7 @@ output_folder = 'output_videos'
 
 # Create the folder if it doesn't exist
 os.makedirs(output_folder, exist_ok=True)
-model = YOLO("../Yolo-Weights/yolov8l.pt")
+model = YOLO("../Yolo-Weights/yolov8s.pt")
 class ObjectDetector:
     def __init__(self, video_path, model_path):
         self.cap = cv2.VideoCapture(video_path)
@@ -77,8 +77,9 @@ class ObjectDetector:
                             cvzone.cornerRect(img, (x1, y1, w, h))
                             # Confidence
                             conf = math.ceil((box.conf[0] * 100)) / 100
+                            print(conf)
                             # Class Name
-                            cls = int(box.cls[0])
+
                             person_count += 1
 
                             cvzone.putTextRect(img, f'{self.classNames[cls]} {conf}', (max(0, x1), max(35, y1)), scale=1, thickness=1)
@@ -113,12 +114,6 @@ def index():
             detector = ObjectDetector(video_path, "../Yolo-Weights/yolov8l.pt")
             detector.detect_objects()
           
-            # return Response(ObjectDetector( video_path ,"../Yolo-Weights/yolov8l.pt").detect_objects(), mimetype='multipart/x-mixed-replace; boundary=frame')
-            # response = Response(ObjectDetector(video_path ,"../Yolo-Weights/yolov8l.pt").detect_objects(), mimetype='multipart/x-mixed-replace; boundary=frame')
-            # response.headers['Refresh'] = '5;url=another_page'  # Redirect to /another_page after 5 seconds
-            # return response
-            # session['redirect_url'] = '/another_page'
-            # return Response(ObjectDetector(video_path, "../Yolo-Weights/yolov8l.pt").detect_objects(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
         
 
