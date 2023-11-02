@@ -3,12 +3,6 @@
 
 This is a simple web application for uploading videos for people detection and displaying the processed video.
 
-## Table of Contents
-
-- [Features](#features)
-- [Installation](#installation)
-- [Demo](#Demo)
-
 
 
 ## Features
@@ -30,6 +24,10 @@ This is a simple web application for uploading videos for people detection and d
 
 
 
+
+
+
+https://github.com/kirtisikka1211/object_detection/assets/116485331/78016645-9265-4f57-acbf-b4f5b1fc1149
 
 
 
