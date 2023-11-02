@@ -1,7 +1,7 @@
-# object_detection
-# Object Detection Upload and Display Web Application
 
-This is a simple web application for uploading videos for object detection and displaying the processed video.
+# People Detection
+
+This is a simple web application for uploading videos for people detection and displaying the processed video.
 
 ## Table of Contents
 
