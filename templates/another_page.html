@@ -3,14 +3,57 @@
 <head>
     <meta charset="utf-8">
     <title>Video Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        p {
+            color: #fff;
+        }
+
+        .video-container {
+            display: inline-block;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a.btn {
+            text-decoration: none;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        a.btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <h1>Displaying Video</h1>
     <p>Here's the video you requested:</p>
-    <img src="{{url_for('video_feed')}}" width="100%"> 
-    <a class="btn btn-success" href="{{url_for('download_video')}}">Download</a>
-  
-   
-
+    <div class="video-container">
+        <img src="{{url_for('video_feed')}}" width="100%"> 
+    </div>
+    <a class="btn" href="{{url_for('download_video')}}">Download</a>
 </body>
 </html>
+

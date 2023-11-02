@@ -3,6 +3,17 @@
 <head>
     <title>Object Detection Upload</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+
+        h1 {
+            color: #fff;
+        }
+
         #loading-screen {
             display: none;
             position: fixed;
@@ -10,7 +21,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(255, 255, 255, 0.7);
+            background: rgba(0, 0, 0, 0.7);
             z-index: 9999;
             text-align: center;
         }
@@ -20,29 +31,69 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: #fff;
+        }
+
+        form {
+            margin: 20px;
+        }
+
+        input[type="file"] {
+            border: 2px solid #fff;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #444;
+            color: #fff;
+        }
+
+        input[type="submit"] {
+            background-color: #444;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .show-video-button {
+            text-decoration: none;
+            background-color: #444;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .show-video-button:hover {
+            background-color: #333;
+        }
+
+        .button-container {
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
     <h1>Upload a Video for Object Detection</h1>
     <form method="POST" enctype="multipart/form-data" id="upload-form">
-        <input type="file" name="video" accept=".mp4">
-        <br><br>
+        <input type="file" name="video" accept=".mp4"><br>
         <input type="submit" value="Upload" id="upload-button">
     </form>
+    <div class="button-container">
+        <a href="{{ url_for('another_page') }}" class="show-video-button">Show Video</a>
+    </div>
+
     <div id="loading-screen">
         <div id="loading-spinner">Loading...</div>
     </div>
-    <a href="{{ url_for('another_page') }}">Display Video</a>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
             $("#upload-form").submit(function(event) {
-                // Show the loading screen
                 $("#loading-screen").show();
-
-                // Disable the upload button to prevent multiple submissions
                 $("#upload-button").prop('disabled', true);
             });
         });
