@@ -7,6 +7,7 @@ This is a simple web application for uploading videos for people detection and d
 
 - [Features](#features)
 - [Installation](#installation)
+- [Demo](#Demo)
 
 
 
@@ -25,6 +26,7 @@ This is a simple web application for uploading videos for people detection and d
 * Install the requirements using `pip install -r requirements.txt`
 * Run the application using `python main.py` or `python3 main.py`
 
+## Demo
 
 
 
