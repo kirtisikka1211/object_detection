@@ -15,7 +15,7 @@ This is a simple web application for uploading videos for people detection and d
 
 - Allows users to upload video files for  detection.
 - Provides a "Show Video" button to view the uploaded video.
-- Download the video with people detected as well. 
+- Download the video and see average count of people detected as well. 
 
 
 ## Installation
