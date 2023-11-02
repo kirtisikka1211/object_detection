@@ -6,7 +6,6 @@ This is a simple web application for uploading videos for people detection and d
 ## Table of Contents
 
 - [Features](#features)
-- [Prerequisites](#prerequisites)
 - [Installation](#installation)
 
 
@@ -17,16 +16,21 @@ This is a simple web application for uploading videos for people detection and d
 - Provides a "Show Video" button to view the uploaded video.
 - Download the video with people detected as well. 
 
-## Prerequisites
-
-Before you begin, ensure you have met the following requirements:
-
-- A web server or hosting environment to run the application.
-- A browser to access and use the web application.
 
 ## Installation
 
-1. Clone this repository to your web server or hosting environment:
+* Clone Repository and open terminal in the repository folder
+* Create a virtual environment using `python -m venv venv`
+* Activate the virtual environment using `source venv/bin/activate`
+* Install the requirements using `pip install -r requirements.txt`
+* Run the application using `python main.py` or `python3 main.py`
 
-```sh
-git clone https://github.com/yourusername/your-repo.git
+
+
+
+
+
+
+
+
+
