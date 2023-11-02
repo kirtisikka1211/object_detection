@@ -4,6 +4,12 @@
 This is a simple web application for uploading videos for people detection and displaying the processed video.
 
 
+## Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Demo](#demo)
 
 ## Features
 
@@ -18,7 +24,30 @@ This is a simple web application for uploading videos for people detection and d
 * Create a virtual environment using `python -m venv venv`
 * Activate the virtual environment using `source venv/bin/activate`
 * Install the requirements using `pip install -r requirements.txt`
-* Run the application using `python main.py` or `python3 main.py`
+
+
+
+## Usage
+
+1. **Access the Web Application:**
+
+   - Run the application using `python main.py` or `python3 main.py`
+   - Visit the application using its URL.
+
+2. **Upload a Video:**
+
+   - Click the "Choose File" button to select a video file for people detection.
+   - Click the "Upload" button to start the upload process. A loading screen will be displayed.
+
+3. **View Processed Video:**
+
+   - Once the video is processed, click the "Show Video" button to view the uploaded video with people detection.
+
+4. **Download Processed Video:**
+
+   - If you want to download the processed video, click the "Download" button to save it to your device.
+
+
 
 ## Demo
 
