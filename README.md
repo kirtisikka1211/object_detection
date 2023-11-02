@@ -10,6 +10,8 @@ This is a simple web application for uploading videos for people detection and d
 
 
 
+
+
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -55,9 +57,11 @@ This is a simple web application for uploading videos for people detection and d
 
 ## Demo
 
+https://github.com/kirtisikka1211/people_detection/assets/116485331/e438a48d-19fd-4a25-8a58-7b24606e055f
 
 
-https://github.com/kirtisikka1211/people_detection/assets/116485331/efcc6ad9-5fb6-40fb-ae2d-9c624fc88933
+
+
 
 
 
